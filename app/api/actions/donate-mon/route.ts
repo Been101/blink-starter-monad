@@ -1,8 +1,6 @@
 import { ActionGetResponse, ActionPostResponse } from "@solana/actions";
 import { serialize } from "wagmi";
 import { parseEther } from "viem";
-import fs from "fs";
-import path from "path";
 // CAIP-2 format for Monad
 const blockchain = `eip155:10143`;
 
