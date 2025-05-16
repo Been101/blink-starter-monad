@@ -32,7 +32,7 @@ export default function Home() {
 
   // Action we want to execute in the Blink
   const { blink, isLoading } = useBlink({
-    url: "evm-action:http://localhost:3000/api/actions/donate-mon",
+    url: "evm-action:https://blink-starter-monad.vercel.app/api/actions/donate-mon",
   });
 
   return (
