@@ -53,9 +53,6 @@ export const Donate = () => {
                 <p className="text-lg font-semibold text-gray-900 dark:text-white">
                   {donation.amount} MON
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {new Date(donation.timestamp).toLocaleDateString()}
-                </p>
               </div>
             </li>
           ))}

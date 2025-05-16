@@ -84,8 +84,6 @@ export const POST = async (req: Request) => {
     // Extract amount from URL
     const url = new URL(req.url);
     const amount = url.searchParams.get("amount");
-    const donationsRes = await fetch(new URL("/api/donate", url.origin));
-    const { donations: existingDonations = [] } = await donationsRes.json();
     const body = await req.json();
 
     console.log("body", body);
@@ -108,12 +106,6 @@ export const POST = async (req: Request) => {
       transaction: transactionJson,
       message: "Donate MON",
     };
-
-    existingDonations.push({
-      address: body.account,
-      amount: amount,
-      timestamp: Date.now(),
-    });
 
     // Return the response with proper headers
     return new Response(JSON.stringify(response), {
